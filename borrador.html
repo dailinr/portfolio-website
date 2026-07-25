@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección de Experiencia - Dailin Romero</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tipografía: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Configuración del Brand System en Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#191C22',
+              accent: '#F8CD68',
+              textPrimary: '#FFFFFD',
+              textSecondary: '#6D7076',
+              textMuted: '#898C92',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos personalizados para el resplandor del timeline -->
+  <style>
+    body {
+      background-color: #191C22;
+      color: #FFFFFD;
+    }
+    .timeline-glow {
+      box-shadow: 0 0 15px 3px rgba(248, 205, 104, 0.4);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen p-8 md:p-24 font-sans selection:bg-brand-accent selection:text-brand-bg">
+
+  <!-- Contenedor Principal -->
+  <section class="max-w-5xl mx-auto">
+    
+    <!-- Encabezado sutil (Estilo imágenes 4 y 5) -->
+    <div class="mb-16 md:mb-24 flex flex-col md:items-start items-center text-center md:text-left">
+      <span class="text-brand-textMuted uppercase tracking-[0.25em] text-xs font-bold mb-4">
+        Experiencia
+      </span>
+      <h2 class="text-3xl md:text-5xl font-medium tracking-tight text-brand-textPrimary">
+        Hitos profesionales <span class="text-brand-textSecondary">& impacto</span>
+      </h2>
+    </div>
+
+    <!-- Estructura del Timeline -->
+    <div class="relative border-l border-white/10 ml-3 md:ml-4">
+
+      <!-- Item de Experiencia -->
+      <div class="relative pl-8 md:pl-12 pb-16">
+        
+        <!-- Punto del Timeline con Resplandor -->
+        <div class="absolute -left-[7px] top-2 w-3.5 h-3.5 bg-brand-accent rounded-full timeline-glow"></div>
+
+        <!-- Contenedor Flex para separar Textos (Izquierda) y Logo/Fecha (Derecha) -->
+        <div class="flex flex-col-reverse md:flex-row gap-8 md:gap-12 justify-between items-start">
+
+          <!-- Columna Izquierda: Información del Rol -->
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold text-brand-accent">Frontend Developer</h3>
+            <h4 class="text-lg text-brand-textPrimary mt-1 font-medium">CZLabs</h4>
+
+            <p class="mt-5 text-brand-textMuted leading-relaxed text-[16px] max-w-2xl">
+              Desarrollo de interfaces de usuario modernas y escalables. Implementación de arquitecturas frontend fluidas enfocadas en la optimización del rendimiento y la experiencia del usuario, integrando lógicas de estado global complejas y consumos de APIs eficientes.
+            </p>
+
+            <!-- Badges de Tecnologías -->
+            <div class="flex flex-wrap gap-2.5 mt-6">
+              <span class="px-3.5 py-1.5 text-xs font-medium border border-white/10 rounded-md text-brand-textPrimary bg-white/5">Next.js</span>
+              <span class="px-3.5 py-1.5 text-xs font-medium border border-white/10 rounded-md text-brand-textPrimary bg-white/5">React Native</span>
+              <span class="px-3.5 py-1.5 text-xs font-medium border border-white/10 rounded-md text-brand-textPrimary bg-white/5">TypeScript</span>
+              <span class="px-3.5 py-1.5 text-xs font-medium border border-white/10 rounded-md text-brand-textPrimary bg-white/5">Zustand</span>
+              <span class="px-3.5 py-1.5 text-xs font-medium border border-white/10 rounded-md text-brand-textPrimary bg-white/5">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Fecha y Logo de la Empresa -->
+          <div class="flex flex-col md:items-end gap-3 shrink-0 mt-1 md:mt-0">
+            <span class="text-brand-textMuted text-sm font-medium tracking-wide">
+              Nov 2025 — Jul 2026
+            </span>
+            
+            <!-- Contenedor del Logo (Estilo imagen 6) -->
+            <div class="w-36 h-20 bg-white rounded-xl flex items-center justify-center p-4 shadow-lg transition-transform hover:scale-105 duration-300">
+              <!-- Placeholder SVG para el logo real de la empresa -->
+              <svg class="w-full h-full text-slate-900" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" letter-spacing="-1">CZLabs</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+</html>

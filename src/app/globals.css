@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --color-primary: #F8CD68; // amarillo 
+  --color-primary-dark: #E0B850; // 
+  --color-background: #191C22; 
+  --color-foreground: #FFFFFD; // blanco
+  --color-secondary: #6D7076; // "alexander"
+  --color-tertiary: #898C92; // // body text gray
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --background: #191C22;
+    --foreground: #FFFFFD;
+    --secondary: #6D7076;
+    --tertiary: #898C92;
+    --accent: #F8CD68;
+    --radius: 0.625rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    @apply bg-background;
+  }
+}
