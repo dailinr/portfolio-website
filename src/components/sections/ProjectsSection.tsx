@@ -57,55 +57,9 @@ function SkeletonCard() {
 }
 
 // ─── Área de imagen compartida ────────────────────────────────────────────────
-// Para proyectos WEB: una imagen a 16/10
-// Para proyectos MOBILE: grid 3 columnas con las pantallas del array images[]
 function CardImageArea({ project }: { project: Project }) {
-  const isMobile = project.type === "mobile";
-
-  // Pantallas para mobile: usa el array images[] (si existe) o image única 3 veces
-  const screens =
-    isMobile && "images" in project && Array.isArray(project.images) && project.images.length > 0
-      ? (project.images as string[])
-      : isMobile
-      ? [project.image, project.image, project.image]
-      : null;
-
-  if (isMobile && screens) {
-    // Grid de 3 capturas de pantalla, misma altura que la foto web (aspect-16/10)
-    return (
-      <div className={`${PROJECT_CARD_IMAGE_WRAPPER} aspect-video`}>
-        <div className="absolute inset-0 grid grid-cols-3 gap-1 p-2">
-          {screens.slice(0, 3).map((src, i) => (
-            <div key={i} className="relative overflow-hidden rounded-lg">
-              {src ? (
-                <Image
-                  src={src}
-                  alt={`Pantalla ${i + 1}`}
-                  fill
-                  sizes="(max-width: 640px) 33vw, 18vw"
-                  className="object-cover object-top"
-                />
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center bg-white/5">
-                  <span className="select-none text-[8px] text-white/20">Screen {i + 1}</span>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        {/* Gradiente inferior igual que la web card */}
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-background/80 to-transparent" />
-        {/* Ícono de enlace en hover */}
-        <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
-          <ArrowIcon />
-        </div>
-      </div>
-    );
-  }
-
-  // Web: imagen única
   return (
-    <div className={`${PROJECT_CARD_IMAGE_WRAPPER} aspect-video`}>
+    <div className={`${PROJECT_CARD_IMAGE_WRAPPER} relative aspect-video`}>
       {project.image ? (
         <Image
           src={project.image}
@@ -120,17 +74,21 @@ function CardImageArea({ project }: { project: Project }) {
         </div>
       )}
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-background/80 to-transparent" />
-      <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
-        <ArrowIcon />
-      </div>
+      
+      {/* El ícono de flecha solo se muestra si existe un link en la data */}
+      {(project as any).link && (
+        <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          <ArrowIcon />
+        </div>
+      )}
     </div>
   );
 }
 
 // ─── Card genérica — mismo token y tamaño para WEB y MOBILE ──────────────────
-function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: React.Ref<HTMLElement> }) {
-  return (
-    <article ref={anchorRef} className={`${PROJECT_CARD} animate-fade-in`}>
+function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: React.Ref<any> }) {
+  const cardContent = (
+    <>
       <CardImageArea project={project} />
 
       {/* Cuerpo — idéntico para ambos tipos */}
@@ -146,6 +104,28 @@ function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: Rea
           ))}
         </div>
       </div>
+    </>
+  );
+
+  // Si el proyecto tiene link, envolvemos la card en <a>
+  if ((project as any).link) {
+    return (
+      <a
+        href={(project as any).link}
+        target="_blank"
+        rel="noopener noreferrer"
+        ref={anchorRef}
+        className={`${PROJECT_CARD} group block cursor-pointer animate-fade-in transition-colors hover:border-white/20`}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  // Si no tiene link, mantenemos el comportamiento por defecto
+  return (
+    <article ref={anchorRef} className={`${PROJECT_CARD} group animate-fade-in`}>
+      {cardContent}
     </article>
   );
 }

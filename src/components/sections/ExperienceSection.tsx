@@ -23,7 +23,8 @@ export default function ExperienceSection() {
         <div className="mb-16 flex flex-col items-start">
           <span className={SECTION_LABEL}>{label}</span>
           <h2 className={SECTION_HEADLINE}>
-            {headline.main} <span className="text-secondary">{headline.highlight}</span>
+            {headline.main} 
+            {/* <span className="text-secondary">{headline.highlight}</span> */}
           </h2>
         </div>
 

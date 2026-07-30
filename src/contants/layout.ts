@@ -74,7 +74,7 @@ export const PROJECT_ROLE_BADGE =
 
 /** Badge de tecnología — igual al de Experience para consistencia */
 export const PROJECT_TECH_BADGE =
-  "px-3 py-1 text-xs font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
+  "px-2.5 py-0.5 text-[10px] font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
 
 /** Tarjeta de proyecto MOBILE — ocupa las 2 columnas, fondo gris oscuro */
 export const PROJECT_MOBILE_CARD =
