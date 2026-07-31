@@ -3,6 +3,7 @@ import Sidebar from '../components/shared/Sidebar'
 import Hero from '../components/sections/Hero'
 import ExperienceSection from '../components/sections/ExperienceSection'
 import ProjectsSection from '../components/sections/ProjectsSection'
+import AboutMeSection from '../components/sections/AboutMeSection'
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <Hero />
       <ExperienceSection />
       <ProjectsSection />
+      <AboutMeSection />
     </main>
   )
 }

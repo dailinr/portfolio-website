@@ -33,13 +33,22 @@ export default function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <button className="rounded-lg border-2 border-primary px-3 py-1.5 text-[13px] font-medium text-primary transition-colors duration-300 hover:bg-primary hover:text-background">
+              <a 
+                href='https://mail.google.com/mail/?view=cm&fs=1&to=dailinromero123@gmail.com&su=Contacto%20desde%20Portafolio.'
+                target="_blank"
+                className="rounded-lg border-2 border-primary px-3 py-1.5 text-[13px] font-medium text-primary transition-colors duration-300 hover:bg-primary hover:text-background">
                 Ponte en contacto
-              </button>
-              <button className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium text-foreground transition-colors duration-300 hover:text-primary">
-                Mi trabajo
+              </a>
+              <a
+                href="/CV_dailin_romero.pdf"
+                download="cv_dailin_romero.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-3 py-1.5 text-[13px] font-medium text-foreground transition-colors duration-300 hover:text-primary"
+              >
+                Descargar CV
                 <svg
-                  className="h-3 w-3"
+                  className="h-4 w-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -48,10 +57,10 @@ export default function Hero() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 5l7 7-7 7"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
 

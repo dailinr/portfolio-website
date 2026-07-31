@@ -159,8 +159,8 @@ export default function ProjectsSection() {
       // Scroll suave hacia el primer card nuevo
       setTimeout(() => {
         firstNewCardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 60);
-    }, 800);
+      }, 10);
+    }, 200);
   }
 
   // Índice del primer card "nuevo" (el que sigue al último visible antes de cargar)

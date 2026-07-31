@@ -9,7 +9,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
       id: "freelance",
       role: "Full Stack Developer",
       company: "Freelance",
-      period: "Apr 2024 — May 2025",
+      period: "Nov 2024 — May 2025",
       description:
         "Desarrollo integral de aplicaciones web a medida. Gestión del ciclo completo del proyecto, abarcando la construcción de interfaces dinámicas, lógica de servidor, bases de datos y diseño de APIs RESTful.",
       technologies: [
@@ -84,18 +84,6 @@ export const PROJECTS_SECTION_CONTENT = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts", "Redux Toolkit"],
     },
     {
-      id: "refdao-app",
-      category: "czlabs",
-      type: "mobile" as const,
-      role: "Mobile Dev",
-      title: "Refdao App",
-      description:
-        "Aplicación móvil multiplataforma que integra flujos de autenticación seguros mediante Google OAuth, gestión eficiente del estado global y consumo escalable de APIs.",
-      link: "https://expo.dev/accounts/dailinr27/projects/refdao-app/builds/e6933414-7bd5-4e4a-8043-0956b8bc6e30",
-      image: "/projects/refdao-portada.png",
-      technologies: ["React Native", "Expo", "Tailwind CSS", "Zustand", "TypeScript", "RHF", "Zod", ],
-    },
-    {
       id: "onpharma",
       category: "czlabs",
       type: "web" as const,
@@ -106,6 +94,18 @@ export const PROJECTS_SECTION_CONTENT = {
       link: "https://onpharma.czlabs.io",
       image: "/projects/520shots_so.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
+    },
+    {
+      id: "refdao-app",
+      category: "czlabs",
+      type: "mobile" as const,
+      role: "Mobile Dev",
+      title: "Refdao App",
+      description:
+        "Aplicación móvil multiplataforma que integra flujos de autenticación seguros mediante Google OAuth, gestión eficiente del estado global y consumo escalable de APIs.",
+      link: "https://expo.dev/accounts/dailinr27/projects/refdao-app/builds/e6933414-7bd5-4e4a-8043-0956b8bc6e30",
+      image: "/projects/refdao-portada.png",
+      technologies: ["React Native", "Expo", "Tailwind CSS", "Zustand", "TypeScript", "RHF", "Zod", ],
     },
     {
       id: "gestion-gastos",
