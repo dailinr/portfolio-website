@@ -1,24 +1,106 @@
-import { GLOBAL_CONTAINER, SECTION_HEADLINE, SECTION_LABEL, STANDARD_SECTION_PY } from "@/src/contants/layout";
+import Image from "next/image";
+import {
+  GLOBAL_CONTAINER,
+  STANDARD_SECTION_PY,
+  SECTION_LABEL,
+  SECTION_HEADLINE,
+  EXPERIENCE_BODY,
+  ABOUT_STATS_TITLE,
+  ABOUT_STATS_SUBTITLE,
+} from "@/src/contants/layout"; // Ajusta esta ruta según la estructura de tu proyecto
+import { ABOUT_SECTION_CONTENT } from "@/src/contants/index"
 
+export default function AboutSection() {
+  const { label, headline, paragraphs, stats, image } = ABOUT_SECTION_CONTENT
 
-export default function AboutMeSection() {
+  return (
+    <section id="about" className={`relative w-full bg-background ${STANDARD_SECTION_PY}`}>
+      <div className={GLOBAL_CONTAINER}>
+        
+        {/* === HEADER DE LA SECCIÓN === */}
+        <div className="mb-10 flex flex-col items-start animate-fade-in">
+          <span className={SECTION_LABEL}>
+            {label}
+          </span>
+          <h2 className={SECTION_HEADLINE}>
+            {headline.main}
+          </h2>
+        </div>
 
+        {/* === GRID PRINCIPAL (2 Columnas en Desktop) === */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+          
+          {/* COLUMNA IZQUIERDA: Textos e Ítems */}
+          <div className="flex flex-col animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            
+            {/* Textos */}
+            <div className="mb-10 flex flex-col gap-5">
+              <p className={EXPERIENCE_BODY}>
+                {paragraphs[0]}
+              </p>
+              <p className={EXPERIENCE_BODY}>
+                {paragraphs[1]}
+              </p>
+            </div>
 
-    return (
-        <section id="about-me" className={`relative w-full bg-background ${STANDARD_SECTION_PY}`}>
-            <div className={GLOBAL_CONTAINER}>
-                
-                <div className="mb-16 flex flex-col items-start">
-                    <span className={SECTION_LABEL}>
-                        Sobre mi
-                    </span>
-                    <h2 className={SECTION_HEADLINE}>
-                        Sobre mi
-                    </h2>
+            {/* Ítems (Estilo Stats) */}
+            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
+              
+              {stats.map((stat) => (
+                <div className="flex flex-col gap-1" key={stat.id}> 
+                  <span className={` ${ABOUT_STATS_TITLE} ${stat.id === "experience" ? 'text-primary' : 'text-foreground'}` }>
+                    {stat.title}
+                  </span>
+                  <span className={ABOUT_STATS_SUBTITLE}>
+                    {stat.subtitle}
+                  </span>
                 </div>
 
-                
+              ))}
+
             </div>
-        </section>
-    )
+          </div>
+
+          {/* COLUMNA DERECHA: Imagen / Ilustración */}
+          <div className="group relative mx-auto w-full max-w-sm lg:max-w-none aspect-[4/5] lg:aspect-square animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            
+            {/* Borde decorativo desplazado (Efecto offset inspirado en tus referencias) */}
+            <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-primary/30 transition-transform duration-500 group-hover:translate-x-5 group-hover:translate-y-5" />
+            
+            {/* Contenedor principal de la imagen */}
+            <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
+              
+              {/* 
+                OPCIÓN A: FOTO
+                Si decides usar tu foto, descomenta este componente Image y ajusta el src.
+              */}
+              {/* 
+              <Image 
+                src={image} 
+                alt="Dailin Romero" 
+                fill 
+                className="object-cover grayscale transition-all duration-500 hover:grayscale-0"
+              /> 
+              */}
+              
+              {/* 
+                OPCIÓN B: ILUSTRACIÓN (Placeholder temporal)
+                Por ahora hay un ícono de código en tu color primario.
+              */}
+              <svg 
+                className="h-24 w-24 text-primary/40 transition-colors duration-300 group-hover:text-primary/70" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
 }

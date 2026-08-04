@@ -73,7 +73,7 @@ function CardImageArea({ project }: { project: Project }) {
           <span className="select-none text-xs text-white/20">{project.title}</span>
         </div>
       )}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-background/80 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-background/60 to-transparent" />
       
       {/* El ícono de flecha solo se muestra si existe un link en la data */}
       {(project as any).link && (

@@ -17,7 +17,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
         "Tailwind CSS",
         "TypeScript",
         "Zustand",
-        "React-hook-form",
+        // "React-hook-form",
         "Express",
         "Mongo DB",
         "Spring Boot",
@@ -27,7 +27,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
     {
       id: "czlabs",
       role: "Frontend & Web3 Developer",
-      company: "CZ labs",
+      company: "cz labs",
       period: "Jun 2025 — Jul 2026",
       description:
         "Formé parte de un equipo Frontend de dos personas junto a mi líder técnico, compartiendo la responsabilidad del ciclo de desarrollo. Nuestra misión fue construir y escalar diversas soluciones tecnológicas, abarcando plataformas web optimizadas con Next.js y aplicaciones móviles multiplataforma con React Native y Expo, implementando la capa de integración Web3 mediante solana-adapter kit para la conexión y gestión segura de wallets en ambos ecosistemas.",
@@ -141,4 +141,37 @@ export const PROJECTS_SECTION_CONTENT = {
       technologies: ["React", 'Tailwind CSS', 'Zustand', 'RHF', 'Zod' ],
     }
   ],
+};
+
+
+export const ABOUT_SECTION_CONTENT = {
+  label: "Conóceme",
+  headline: {
+    main: "Sobre mí",
+  },
+  paragraphs: [
+    "¡Hola! Soy Dailin. Llevo cinco años inmersa en el ecosistema del desarrollo. Mi especialidad es el Frontend, creando interfaces dinámicas e intuitivas; a la par, domino el desarrollo Backend y las bases de datos a un nivel que me permite asumir con seguridad el ciclo completo de una solución Full Stack.",
+    "En cuanto a mi formación técnica, cursé hasta el noveno semestre de Ingeniería de Sistemas en la Universidad del Magdalena, una base que he potenciado a través de mi experiencia profesional y la creación constante de proyectos independientes. Disfruto transformar requerimientos complejos en código limpio, escalable y listo para producción.",
+  ],
+  stats: [
+    {
+      id: "location",
+      title: "Barranquilla",
+      subtitle: "Colombia",
+    },
+    {
+      id: "experience",
+      title: "5 Años",
+      subtitle: "De experiencia",
+    },
+    {
+      id: "focus",
+      title: "Web & Mobile",
+      subtitle: "Ecosistema",
+    },
+  ],
+  image: {
+    src: "/tu-foto.jpg",
+    alt: "Dailin Romero",
+  },
 };

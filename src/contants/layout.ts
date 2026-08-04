@@ -14,7 +14,7 @@ export const STANDARD_SECTION_PY =
 // TÍTULOS Y CABECERAS DE SECCIÓN GLOBALES
 // =================================================================
 export const SECTION_LABEL =
-  "text-secondary uppercase tracking-[0.25em] text-xs font-bold mb-2" as const; 
+  "text-secondary uppercase tracking-[0.20em] text-xs font-bold mb-1.5" as const; 
 
 export const SECTION_HEADLINE =
   "text-3xl font-bold tracking-tight text-foreground" as const;
@@ -29,13 +29,13 @@ export const TIMELINE_DOT =
   "absolute -left-[7px] top-2 w-3 h-3 bg-primary rounded-full" as const; 
 
 export const EXPERIENCE_ROLE_HEADLINE =
-  "text-xl font-bold text-primary" as const; 
+  "text-xl font-bold text-primary mb-1" as const; 
 
 export const EXPERIENCE_COMPANY_HEADLINE =
-  "text-lg font-semibold text-foreground" as const; 
+  "text-lg font-semibold text-foreground mb-2" as const; 
 
 export const EXPERIENCE_BODY =
-  "text-base text-tertiary leading-relaxed max-w-2xl text-pretty" as const; 
+  "text-base text-tertiary leading-relaxed max-w-2xl text-pretty mb-2" as const; 
 
 export const EXPERIENCE_BADGE =
   "px-3 py-1 text-xs font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
@@ -54,7 +54,7 @@ export const PROJECT_FILTER_PILL_ACTIVE =
 
 /** Tarjeta de proyecto — contenedor principal */
 export const PROJECT_CARD =
-  "group relative flex flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] transition-all duration-300 hover:border-white/15 hover:bg-white/[0.05]" as const;
+  "group relative flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] transition-all duration-300 hover:border-white/1 hover:bg-white/[0.04]" as const;
 
 /** Zona de imagen del proyecto */
 export const PROJECT_CARD_IMAGE_WRAPPER =
@@ -85,3 +85,10 @@ export const PROJECT_MOBILE_PHONE_FRAME =
   "relative flex flex-col overflow-hidden rounded-[2rem] border-[3px] border-white/15 bg-[#141518] shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-transform duration-300" as const;
 
 
+// ----------------- ABOUT ME ----------------------
+
+export const ABOUT_STATS_TITLE = 
+  "text-lg font-bold" as const;
+
+export const ABOUT_STATS_SUBTITLE = 
+  "text-[11px] font-semibold tracking-wider text-secondary uppercase" as const;

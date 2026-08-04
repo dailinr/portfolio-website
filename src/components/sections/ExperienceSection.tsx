@@ -20,7 +20,7 @@ export default function ExperienceSection() {
     <section id="experience" className={`relative w-full bg-background ${STANDARD_SECTION_PY}`}>
       <div className={GLOBAL_CONTAINER}>
 
-        <div className="mb-16 flex flex-col items-start">
+        <div className="mb-10 flex flex-col items-start">
           <span className={SECTION_LABEL}>{label}</span>
           <h2 className={SECTION_HEADLINE}>
             {headline.main} 
@@ -37,7 +37,7 @@ export default function ExperienceSection() {
               <div className="flex flex-col-reverse items-start justify-between gap-6 md:flex-row md:gap-10">
 
                 {/* Columna Izquierda: Información */}
-                <div className="flex-1 flex flex-col gap-2">
+                <div className="flex-1 flex flex-col">
                   <h3 className={EXPERIENCE_ROLE_HEADLINE}>{exp.role}</h3>
                   <h4 className={EXPERIENCE_COMPANY_HEADLINE}>{exp.company}</h4>
                   <p className={EXPERIENCE_BODY}>{exp.description}</p>
