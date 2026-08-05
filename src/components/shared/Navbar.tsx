@@ -9,8 +9,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: 'Experiencia', href: '#experience' },
   { label: 'Proyectos', href: '#projects' },
-  { label: 'Sobre mí', href: '#about-me' },
-  // { label: 'Contacto', href: '#contact' },
+  { label: 'Sobre mí', href: '#about' },
 ]
 
 export default function Navbar() {

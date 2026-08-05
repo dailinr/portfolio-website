@@ -175,3 +175,9 @@ export const ABOUT_SECTION_CONTENT = {
     alt: "Dailin Romero",
   },
 };
+
+export const FOOTER_CONTENT = {
+  year: "2025.",
+  copy_right: "Todos los derechos reservados.",
+  full_name: "Dailin Romero"
+}
