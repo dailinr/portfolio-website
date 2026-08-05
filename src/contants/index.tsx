@@ -28,6 +28,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
       id: "czlabs",
       role: "Frontend & Web3 Developer",
       company: "cz labs",
+      link: "https://czlabs.io/",
       period: "Jun 2025 — Jul 2026",
       description:
         "Formé parte de un equipo Frontend de dos personas junto a mi líder técnico, compartiendo la responsabilidad del ciclo de desarrollo. Nuestra misión fue construir y escalar diversas soluciones tecnológicas, abarcando plataformas web optimizadas con Next.js y aplicaciones móviles multiplataforma con React Native y Expo, implementando la capa de integración Web3 mediante solana-adapter kit para la conexión y gestión segura de wallets en ambos ecosistemas.",
