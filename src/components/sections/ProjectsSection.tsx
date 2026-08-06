@@ -176,7 +176,7 @@ export default function ProjectsSection() {
             <span className={SECTION_LABEL}>{label}</span>
             <h2 className={SECTION_HEADLINE}>
               {headline.main}
-              <span className="text-secondary">{headline.highlight}</span>
+              {/* <span className="text-secondary">{headline.highlight}</span> */}
             </h2>
           </div>
         </div>

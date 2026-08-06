@@ -26,7 +26,7 @@ export const TIMELINE_LINE =
   "relative border-l border-white/10 ml-3" as const;
 
 export const TIMELINE_DOT =
-  "absolute -left-[7px] top-2 w-3 h-3 bg-primary rounded-full" as const; 
+  "absolute -left-[4.5px] top-2 w-[8.5px] h-[8.5px] bg-primary rounded-full shadow-[0_0_10px_2.5px_rgba(248,205,104,0.4)]" as const; 
 
 export const EXPERIENCE_ROLE_HEADLINE =
   "text-xl font-bold text-primary mb-1" as const; 
@@ -38,7 +38,7 @@ export const EXPERIENCE_BODY =
   "text-base text-tertiary text-left md:text-justify leading-relaxed max-w-2xl text-pretty mb-2 " as const; 
 
 export const EXPERIENCE_BADGE =
-  "px-3 py-1 text-xs font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
+  "px-3 py-0.5 text-[11px] font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
 
 // =================================================================
 // TOKENS ESPECÍFICOS DE PROYECTOS (Projects)

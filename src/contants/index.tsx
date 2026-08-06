@@ -75,7 +75,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
 export const PROJECTS_SECTION_CONTENT = {
   label: "Work",
   headline: {
-    main: "Proyectos ",
+    main: "Proyectos destacados",
     highlight: "destacados",
   },
   filters: [
@@ -91,7 +91,7 @@ export const PROJECTS_SECTION_CONTENT = {
       role: "Frontend",
       title: "Carbium Swap API",
       description:
-        "Interfaz para una API REST en la blockchain de Solana. Permite la gestión de cotizaciones en tiempo real, ejecución de transacciones y enrutamiento inteligente multi-DEX bajo infraestructura suiza de alta seguridad.",
+        "Plataforma de infraestructura Web3 en Solana. Ofrece un entorno interactivo para gestionar cotizaciones en tiempo real, enrutamiento multi-DEX y ejecución de swaps mediante una API optimizada y segura.",
       link: "https://api.carbium.io/",
       image: "/projects/80shots_so.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
@@ -103,7 +103,7 @@ export const PROJECTS_SECTION_CONTENT = {
       role: "Frontend",
       title: "Safirum",
       description:
-        "Plataforma web orientada a la infraestructura de moneda digital suiza. Proporciona rieles institucionales para la emisión regulada de stablecoins (CHF-S) con respaldo 1:1 en instituciones financieras de Nivel 1.",
+        "Plataforma web3 orientada a la infraestructura de moneda digital suiza. Proporciona rieles institucionales para la emisión regulada de stablecoins (CHF-S) con respaldo 1:1 en instituciones financieras de Nivel 1.",
       link: "https://www.safirum.com/",
       image: "/projects/462shots_so.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts", "Redux Toolkit"],
@@ -115,7 +115,7 @@ export const PROJECTS_SECTION_CONTENT = {
       role: "Frontend",
       title: "Onpharma",
       description:
-        "Landing page de alto rendimiento para una plataforma de inversión en acciones tokenizadas del sector salud. Desarrollada con arquitectura modular y optimización visual aislando elementos gráficos de fondo de manera individual.",
+        "Plataforma Web3 (STO) orientada al sector salud. Gestiona el ciclo completo del inversor mediante una arquitectura de alto rendimiento que integra validación KYC, firma de documentos y la compra automatizada de acciones tokenizadas utilizando USDC sobre la red de Solana.",
       link: "https://onpharma.czlabs.io",
       image: "/projects/520shots_so.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
@@ -127,7 +127,9 @@ export const PROJECTS_SECTION_CONTENT = {
       role: "Mobile Dev",
       title: "Refdao App",
       description:
-        "Aplicación móvil multiplataforma que integra flujos de autenticación seguros mediante Google OAuth, gestión eficiente del estado global y consumo escalable de APIs.",
+        "App móvil Web3 para torneos de Flag Football que conecta árbitros y organizadores mediante perfiles RefID. Integra autenticación híbrida (OAuth/Wallets), pagos instantáneos en USDC sobre la red de Solana.",
+        // "App móvil Web3 para torneos de Flag Football que conecta árbitros y organizadores mediante perfiles RefID para construir un historial profesional. Integra autenticación híbrida (OAuth/Wallets) y pagos instantáneos en USDC sobre la red de Solana.",
+        
       link: "https://expo.dev/accounts/dailinr27/projects/refdao-app/builds/e6933414-7bd5-4e4a-8043-0956b8bc6e30",
       image: "/projects/refdao-portada.png",
       technologies: ["React Native", "Expo", "Tailwind CSS", "Zustand", "TypeScript", "RHF", "Zod", ],
@@ -138,7 +140,7 @@ export const PROJECTS_SECTION_CONTENT = {
       type: "web" as const,
       role: "Full Stack",
       title: 'Gestion de gastos',
-      description: 'LLeva un control de tus gastos, ingresos y metas de ahorro. En el dashboard, los datos se visualizan mediante gráficos y diagramas para darle al usuario una mejor comprensión. ',
+      description: 'Aplicación web para la gestión integral de finanzas personales. Permite administrar ingresos, gastos y metas de ahorro a través de un dashboard interactivo con gráficos dinámicos para facilitar el análisis visual de los datos.',
       link: 'https://gestion-gastos-alpha.vercel.app/',
       image: '/projects/179shots_so.png',
       technologies: ["React", 'Tailwind CSS', 'Zustand', 'Express', 'Mongo DB', "Node.js", "Recharts", "RHF"],
@@ -149,7 +151,7 @@ export const PROJECTS_SECTION_CONTENT = {
       type: "web" as const,
       role: "Full Stack",
       title: 'Blog tecnopulse',
-      description: 'Los usuarios pueden registrarse y publicar, editar o eliminar artículos sobre tecnología y temas afines. También es posible seguir perfiles a su preferencia de contenido, guardar sus articulos favoritos, recibir notificaciones de actividad, etc.',
+      description: "Blog interactivo centrado en tecnología y temas afines. Cuenta con un sistema completo para gestionar artículos propios, junto con funciones para seguir perfiles de interés, construir una colección de lecturas favoritas y recibir notificaciones de actividad.",
       link: 'https://tecnopulse.lat/',
       image: '/projects/945shots_so.png',
       technologies :["React", 'Tailwind CSS', 'Express', 'Mongo DB', "Node.js"],
@@ -175,7 +177,7 @@ export const ABOUT_SECTION_CONTENT = {
     main: "Sobre mí",
   },
   paragraphs: [
-    "¡Hola! Soy Dailin. Llevo cinco años inmersa en el ecosistema del desarrollo. Mi especialidad es el Frontend, creando interfaces dinámicas e intuitivas; a la par, domino el desarrollo Backend y las bases de datos a un nivel que me permite asumir con seguridad el ciclo completo de una solución Full Stack.",
+    "¡Hola! Soy Dailin. Llevo cuatro años inmersa en el ecosistema del desarrollo. Mi especialidad es el Frontend, creando interfaces dinámicas e intuitivas; a la par, domino el desarrollo Backend y las bases de datos a un nivel que me permite asumir con seguridad el ciclo completo de una solución Full Stack.",
     "En cuanto a mi formación técnica, cursé hasta el noveno semestre de Ingeniería de Sistemas en la Universidad del Magdalena, una base que he potenciado a través de mi experiencia profesional y la creación constante de proyectos independientes. Disfruto transformar requerimientos complejos en código limpio, escalable y listo para producción.",
   ],
   stats: [
@@ -186,7 +188,7 @@ export const ABOUT_SECTION_CONTENT = {
     },
     {
       id: "experience",
-      title: "5 Años",
+      title: "4 Años",
       subtitle: "De experiencia",
     },
     {
