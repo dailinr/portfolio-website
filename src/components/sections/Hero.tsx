@@ -1,16 +1,16 @@
 import { GLOBAL_CONTAINER } from "@/src/contants/layout";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    // 1. CAPA DE PÁGINA/SECCIÓN: Limita la altura (min-h-screen), aplica el fondo infinito.
-    // NOTA: No le ponemos max-w, para que el background sea de lado a lado.
+    // 1. CAPA DE PÁGINA/SECCIÓN: Limita la altura (min-h-screen), aplica el fondo infinito. NOTA: No le ponemos max-w, para que el background sea de lado a lado.
     <section id="hero" className="relative flex min-h-screen w-full items-center justify-center bg-background pt-24 pb-12">
-      
+
       {/* 2. CAPA CONTENEDORA: Llama a tu Token Maestro que evita que todo se esparza a los bordes. */}
       <div className={GLOBAL_CONTAINER}>
-        
-         {/* 3. CAPA DE LAYOUT: Tu grilla en sí. Ya no se encarga del 'max-w' o el 'mx-auto', solo del acomodo local. */}
-        <div className="grid w-full grid-cols-1 gap-12 items-center lg:grid-cols-2 lg:gap-16">
+
+        {/* 3. CAPA DE LAYOUT: Tu grilla en sí. Ya no se encarga del 'max-w' o el 'mx-auto', solo del acomodo local. */}
+        <div className="grid w-full grid-cols-1 gap-12 items-center lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
           {/* Left Content */}
           <div className="flex flex-col">
             {/* Small Label */}
@@ -21,19 +21,19 @@ export default function Hero() {
             {/* Main Title */}
             <div className="mb-4 space-y-4">
               <h1 className="text-4xl font-bold leading-tight text-foreground md:text-3xl lg:text-4xl">
-                Desarrolladora Web{' '}
+                Desarrolladora Web{' '} <br />
                 <span className="text-primary">Full-Stack</span>
               </h1>
             </div>
 
             {/* Description */}
-            <p className="mb-4 max-w-lg text-base leading-relaxed text-tertiary md:text-md">
+            <p className="mb-4 max-w-lg text-md text-left md:text-justify leading-relaxed text-tertiary md:text-md">
               Construyendo soluciones completas desde la interfaz de usuario hasta la lógica del servidor y gestión de datos. Buscando nuevas oportunidades laborales.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <a 
+              <a
                 href='https://mail.google.com/mail/?view=cm&fs=1&to=dailinromero123@gmail.com&su=Contacto%20desde%20Portafolio.'
                 target="_blank"
                 className="rounded-lg border-2 border-primary px-3 py-1.5 text-[13px] font-medium text-primary transition-colors duration-300 hover:bg-primary hover:text-background">
@@ -65,26 +65,19 @@ export default function Hero() {
           </div>
 
           {/* Right Image Container */}
-          <div className="flex items-center justify-center lg:justify-end ">
-            <div className="relative flex aspect-square w-full max-w-sm flex-col justify-center">
-              {/* Outer Glow Effect */}
-              {/* <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-transparent opacity-10 rounded-2xl blur-2xl" /> */}
+          <div className="group relative mx-auto w-full max-w-sm lg:max-w-none lg:self-start aspect-[4/5] lg:aspect-square animate-fade-in" style={{ animationDelay: "0.2s" }}>
 
-              {/* Image Container */}
-              <div className="relative w-full overflow-hidden rounded-2xl border border-primary border-opacity-30 shadow-2xl">
-                {/* Placeholder Image - will be replaced by user */}
-                <div className="flex h-[300px] w-full items-center justify-center">
-                  <div className="text-center">
-                    
-                    <p className="text-sm text-tertiary">
-                      Reemplazar con tu foto
-                    </p>
-                  </div>
-                </div>
+            {/* Borde decorativo desplazado (Efecto offset inspirado en tus referencias) */}
+            <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-primary/30 transition-transform duration-500 group-hover:translate-x-5 group-hover:translate-y-5" />
 
-                {/* Image Overlay - optional accent */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-40" />
-              </div>
+            {/* Contenedor principal de la imagen */}
+            <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
+              <Image
+                src={"/ia-pfp-1.png"}
+                alt="Dailin Romero"
+                fill
+                className="object-cover grayscale transition-all duration-500 hover:grayscale-0"
+              />
             </div>
           </div>
         </div>

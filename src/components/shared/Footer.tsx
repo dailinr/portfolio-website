@@ -5,7 +5,7 @@ export default function Footer() {
   const { year, copy_right, full_name } = FOOTER_CONTENT
 
   return (
-    <footer className="w-full bg-background pt-30 pb-8  border-white/5 relative z-10">
+    <footer className="w-full bg-background mt-10 py-8 border  border-white/5 relative z-10">
       
       <div className={GLOBAL_CONTAINER}>
 

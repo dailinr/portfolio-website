@@ -34,7 +34,7 @@ export default function AboutSection() {
           <div className="flex flex-col animate-fade-in" style={{ animationDelay: "0.1s" }}>
             
             {/* Textos */}
-            <div className="mb-10 flex flex-col gap-5">
+            <div className="mb-6 flex flex-col gap-5">
               <p className={EXPERIENCE_BODY}>
                 {paragraphs[0]}
               </p>
@@ -44,7 +44,7 @@ export default function AboutSection() {
             </div>
 
             {/* Ítems (Estilo Stats) */}
-            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-6 sm:grid-cols-3">
               
               {stats.map((stat) => (
                 <div className="flex flex-col gap-1" key={stat.id}> 
@@ -62,40 +62,19 @@ export default function AboutSection() {
           </div>
 
           {/* COLUMNA DERECHA: Imagen / Ilustración */}
-          <div className="group relative mx-auto w-full max-w-sm lg:max-w-none aspect-[4/5] lg:aspect-square animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="group relative mx-auto w-full max-w-sm lg:max-w-none lg:self-start aspect-[4/5] lg:aspect-square animate-fade-in" style={{ animationDelay: "0.2s" }}>
             
             {/* Borde decorativo desplazado (Efecto offset inspirado en tus referencias) */}
             <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-primary/30 transition-transform duration-500 group-hover:translate-x-5 group-hover:translate-y-5" />
             
             {/* Contenedor principal de la imagen */}
-            <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
-              
-              {/* 
-                OPCIÓN A: FOTO
-                Si decides usar tu foto, descomenta este componente Image y ajusta el src.
-              */}
-              {/* 
+            <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10  backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
               <Image 
-                src={image} 
+                src={"/photo-perfil-Photoroom.png"} 
                 alt="Dailin Romero" 
                 fill 
-                className="object-cover grayscale transition-all duration-500 hover:grayscale-0"
+                className="object-cover "
               /> 
-              */}
-              
-              {/* 
-                OPCIÓN B: ILUSTRACIÓN (Placeholder temporal)
-                Por ahora hay un ícono de código en tu color primario.
-              */}
-              <svg 
-                className="h-24 w-24 text-primary/40 transition-colors duration-300 group-hover:text-primary/70" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-
             </div>
           </div>
 

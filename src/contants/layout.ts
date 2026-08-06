@@ -35,7 +35,7 @@ export const EXPERIENCE_COMPANY_HEADLINE =
   "text-lg font-semibold text-foreground mb-2" as const; 
 
 export const EXPERIENCE_BODY =
-  "text-base text-tertiary leading-relaxed max-w-2xl text-pretty mb-2" as const; 
+  "text-base text-tertiary text-left md:text-justify leading-relaxed max-w-2xl text-pretty mb-2 " as const; 
 
 export const EXPERIENCE_BADGE =
   "px-3 py-1 text-xs font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
@@ -66,7 +66,7 @@ export const PROJECT_CARD_TITLE =
 
 /** Descripción de la card de proyecto */
 export const PROJECT_CARD_BODY =
-  "text-sm text-tertiary leading-relaxed text-pretty" as const;
+  "text-sm text-tertiary text-left md:text-justify leading-relaxed text-pretty" as const;
 
 /** Badge de rol dentro de la card (Lead Engineer, Full-Stack...) */
 export const PROJECT_ROLE_BADGE =

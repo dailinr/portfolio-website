@@ -172,7 +172,7 @@ export const ABOUT_SECTION_CONTENT = {
     },
   ],
   image: {
-    src: "/tu-foto.jpg",
+    src: "/about-pfp.png",
     alt: "Dailin Romero",
   },
 };

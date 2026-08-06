@@ -1,8 +1,5 @@
 'use client'
 
-import { CodeXml, Heart } from "lucide-react"
-import Image from "next/image"
-
 interface NavLink {
   label: string
   href: string
