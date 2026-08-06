@@ -1,3 +1,27 @@
+export const HERO_SECTION_CONTENT = {
+  label: "Dailin Romero",
+  headline: {
+    main: "Desarrolladora Web",
+    highlight: "Full-Stack",
+  },
+  description: "Construyendo soluciones completas desde la interfaz de usuario hasta la lógica del servidor y gestión de datos. Buscando nuevas oportunidades laborales.",
+  buttons: {
+    contact: {
+      label: "Ponte en contacto",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=dailinromero123@gmail.com&su=Contacto%20desde%20Portafolio.",
+    },
+    download_cv: {
+      label: "Descargar CV",
+      href: "/CV_dailin_romero.pdf",
+      fileName: "cv_dailin_romero.pdf",
+    },
+  },
+  image: {
+    src: "/hero-pfp.png",
+    alt: "Dailin Romero",
+  },
+};
+
 export const EXPERIENCE_SECTION_CONTENT = {
   label: "TRAYECTORIA",
   headline: {
@@ -172,7 +196,7 @@ export const ABOUT_SECTION_CONTENT = {
     },
   ],
   image: {
-    src: "/about-pfp.png",
+    src: "/about-pfp(2).png",
     alt: "Dailin Romero",
   },
 };

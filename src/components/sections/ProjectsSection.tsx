@@ -41,9 +41,9 @@ function ArrowIcon() {
 // ─── Skeleton card: mismas proporciones que las cards reales ──────────────────
 function SkeletonCard() {
   return (
-    <div className="flex animate-pulse flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/3">
-      <div className="aspect-16/10 w-full bg-white/6" />
-      <div className="flex flex-col gap-3 p-5">
+    <div className="flex animate-pulse flex-col gap-5">
+      <div className="aspect-16/10 w-full rounded-2xl bg-white/6" />
+      <div className="flex flex-col gap-3">
         <div className="h-5 w-3/4 rounded-md bg-white/7" />
         <div className="h-3.5 w-full rounded-md bg-white/5" />
         <div className="h-3.5 w-5/6 rounded-md bg-white/5" />
@@ -92,7 +92,7 @@ function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: Rea
       <CardImageArea project={project} />
 
       {/* Cuerpo — idéntico para ambos tipos */}
-      <div className="flex flex-1 flex-col gap-3 p-5">
+      <div className="flex flex-1 flex-col gap-3">
         <div className="flex items-start justify-between gap-3">
           <h3 className={PROJECT_CARD_TITLE}>{project.title}</h3>
           <span className={`${PROJECT_ROLE_BADGE} mt-0.5 shrink-0`}>{project.role}</span>
@@ -115,7 +115,7 @@ function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: Rea
         target="_blank"
         rel="noopener noreferrer"
         ref={anchorRef}
-        className={`${PROJECT_CARD} group block cursor-pointer animate-fade-in transition-colors hover:border-white/20`}
+        className={`${PROJECT_CARD} group block cursor-pointer animate-fade-in transition-colors`}
       >
         {cardContent}
       </a>
@@ -195,7 +195,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* ── Grid de Tarjetas ── */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14">
           {visible.map((project, i) => (
             <ProjectCard
               key={project.id}

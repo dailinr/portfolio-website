@@ -1,10 +1,12 @@
 import { GLOBAL_CONTAINER } from "@/src/contants/layout";
+import { HERO_SECTION_CONTENT } from "@/src/contants/index";
 import Image from "next/image";
 
 export default function Hero() {
+  const { label, headline, description, buttons, image } = HERO_SECTION_CONTENT;
   return (
     // 1. CAPA DE PÁGINA/SECCIÓN: Limita la altura (min-h-screen), aplica el fondo infinito. NOTA: No le ponemos max-w, para que el background sea de lado a lado.
-    <section id="hero" className="relative flex min-h-screen w-full items-center justify-center bg-background pt-24 pb-12">
+    <section id="inicio" className="relative flex min-h-screen w-full items-center justify-center bg-background pt-24 pb-12">
 
       {/* 2. CAPA CONTENEDORA: Llama a tu Token Maestro que evita que todo se esparza a los bordes. */}
       <div className={GLOBAL_CONTAINER}>
@@ -15,38 +17,38 @@ export default function Hero() {
           <div className="flex flex-col">
             {/* Small Label */}
             <div className="mb-1 text-sm font-bold text-secondary lg:text-2xl">
-              Dailin Romero
+              {label}
             </div>
 
             {/* Main Title */}
             <div className="mb-4 space-y-4">
               <h1 className="text-4xl font-bold leading-tight text-foreground md:text-3xl lg:text-4xl">
-                Desarrolladora Web{' '} <br />
-                <span className="text-primary">Full-Stack</span>
+                {headline.main}{' '} <br />
+                <span className="text-primary">{headline.highlight}</span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="mb-4 max-w-lg text-md text-left md:text-justify leading-relaxed text-tertiary md:text-md">
-              Construyendo soluciones completas desde la interfaz de usuario hasta la lógica del servidor y gestión de datos. Buscando nuevas oportunidades laborales.
+              {description}
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <a
-                href='https://mail.google.com/mail/?view=cm&fs=1&to=dailinromero123@gmail.com&su=Contacto%20desde%20Portafolio.'
+                href={buttons.contact.href}
                 target="_blank"
                 className="rounded-lg border-2 border-primary px-3 py-1.5 text-[13px] font-medium text-primary transition-colors duration-300 hover:bg-primary hover:text-background">
-                Ponte en contacto
+                {buttons.contact.label}
               </a>
               <a
-                href="/CV_dailin_romero.pdf"
-                download="cv_dailin_romero.pdf"
+                href={buttons.download_cv.href}
+                download={buttons.download_cv.fileName}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-3 py-1.5 text-[13px] font-medium text-foreground transition-colors duration-300 hover:text-primary"
               >
-                Descargar CV
+                {buttons.download_cv.label}
                 <svg
                   className="h-4 w-4"
                   fill="none"
@@ -73,8 +75,8 @@ export default function Hero() {
             {/* Contenedor principal de la imagen */}
             <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
               <Image
-                src={"/ia-pfp-1.png"}
-                alt="Dailin Romero"
+                src={image.src}
+                alt={image.alt}
                 fill
                 className="object-cover grayscale transition-all duration-500 hover:grayscale-0"
               />

@@ -1,18 +1,49 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 interface NavLink {
   label: string
   href: string
-  isActive?: boolean
 }
 
 const navLinks: NavLink[] = [
+  { label: 'Inicio', href: '#inicio'},
   { label: 'Experiencia', href: '#experience' },
   { label: 'Proyectos', href: '#projects' },
   { label: 'Sobre mí', href: '#about' },
 ]
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = ''
+      for (const link of navLinks) {
+        const id = link.href.substring(1)
+        const element = document.getElementById(id)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          const viewportMiddle = window.innerHeight / 2
+          if (rect.top <= viewportMiddle && rect.bottom >= viewportMiddle) {
+            current = link.href
+            break
+          }
+        }
+      }
+      
+      if (current) {
+        setActiveSection(current)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background">
       <nav className="px-8 py-6 flex items-center justify-between max-w-7xl mx-auto">
@@ -59,7 +90,8 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${link.isActive
+              onClick={() => setActiveSection(link.href)}
+              className={`text-sm font-medium transition-colors ${activeSection === link.href
                   ? 'text-primary'
                   : 'text-tertiary hover:text-foreground'
                 }`}

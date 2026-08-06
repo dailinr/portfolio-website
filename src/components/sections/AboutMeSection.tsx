@@ -70,8 +70,8 @@ export default function AboutSection() {
             {/* Contenedor principal de la imagen */}
             <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10  backdrop-blur-sm transition-colors duration-300 group-hover:border-white/20">
               <Image 
-                src={"/photo-perfil-Photoroom.png"} 
-                alt="Dailin Romero" 
+                src={image.src} 
+                alt={image.alt} 
                 fill 
                 className="object-cover "
               /> 

@@ -8,7 +8,7 @@ export const GLOBAL_CONTAINER =
  * 2. RITMO VERTICAL DE SECCIONES (Vertical Rhythm)
  */
 export const STANDARD_SECTION_PY =
-  "py-12" as const; 
+  "py-14 scroll-mt-20" as const; 
 
 // =================================================================
 // TÍTULOS Y CABECERAS DE SECCIÓN GLOBALES
@@ -54,11 +54,11 @@ export const PROJECT_FILTER_PILL_ACTIVE =
 
 /** Tarjeta de proyecto — contenedor principal */
 export const PROJECT_CARD =
-  "group relative flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] transition-all duration-300 hover:border-white/1 hover:bg-white/[0.04]" as const;
+  "group relative flex flex-col gap-5 transition-all duration-300" as const;
 
 /** Zona de imagen del proyecto */
 export const PROJECT_CARD_IMAGE_WRAPPER =
-  "relative w-full overflow-hidden bg-white/[0.04]" as const;
+  "relative w-full overflow-hidden rounded-2xl bg-white/[0.02]" as const;
 
 /** Título de la card de proyecto */
 export const PROJECT_CARD_TITLE =
