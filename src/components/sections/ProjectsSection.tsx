@@ -17,6 +17,8 @@ import {
   PROJECT_ROLE_BADGE,
   PROJECT_TECH_BADGE,
 } from "@/src/contants/layout";
+import Entrance from "@/src/components/motion/Entrance";
+import ProjectCardMotion from "@/src/components/motion/ProjectCardMotion.client";
 
 const PAGE_SIZE = 6;
 const { label, headline, filters, projects } = PROJECTS_SECTION_CONTENT;
@@ -115,7 +117,7 @@ function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: Rea
         target="_blank"
         rel="noopener noreferrer"
         ref={anchorRef}
-        className={`${PROJECT_CARD} group block cursor-pointer animate-fade-in transition-colors`}
+        className={`${PROJECT_CARD} group block cursor-pointer transition-colors`}
       >
         {cardContent}
       </a>
@@ -124,7 +126,7 @@ function ProjectCard({ project, anchorRef }: { project: Project; anchorRef?: Rea
 
   // Si no tiene link, mantenemos el comportamiento por defecto
   return (
-    <article ref={anchorRef} className={`${PROJECT_CARD} group animate-fade-in`}>
+    <article ref={anchorRef} className={`${PROJECT_CARD} group`}>
       {cardContent}
     </article>
   );
@@ -170,8 +172,8 @@ export default function ProjectsSection() {
     <section id="projects" className={`relative w-full bg-background ${STANDARD_SECTION_PY}`}>
       <div className={GLOBAL_CONTAINER}>
 
-        {/* ── Encabezado ── */}
-        <div className="mb-8 flex flex-col items-start md:flex-row md:items-end md:justify-between">
+        {/* ── Encabezado animado con Entrance ── */}
+        <Entrance direction="up" className="mb-8 flex flex-col items-start md:flex-row md:items-end md:justify-between">
           <div>
             <span className={SECTION_LABEL}>{label}</span>
             <h2 className={SECTION_HEADLINE}>
@@ -179,10 +181,10 @@ export default function ProjectsSection() {
               {/* <span className="text-secondary">{headline.highlight}</span> */}
             </h2>
           </div>
-        </div>
+        </Entrance>
 
-        {/* ── Pills de Filtro ── */}
-        <div className="mb-10 flex flex-wrap gap-2">
+        {/* ── Pills de Filtro animados ── */}
+        <Entrance direction="up" delay={0.1} className="mb-10 flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
               key={f.id}
@@ -192,17 +194,18 @@ export default function ProjectsSection() {
               {f.label}
             </button>
           ))}
-        </div>
+        </Entrance>
 
-        {/* ── Grid de Tarjetas ── */}
+        {/* ── Grid de Tarjetas con entrada lateral alternada (index={i}) ── */}
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14">
           {visible.map((project, i) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              // Le pasamos el ref solo al primer card nuevo para el scroll
-              anchorRef={i === firstNewIndex && firstNewIndex > 0 ? firstNewCardRef : undefined}
-            />
+            <ProjectCardMotion key={project.id} index={i}>
+              <ProjectCard
+                project={project}
+                // Le pasamos el ref solo al primer card nuevo para el scroll
+                anchorRef={i === firstNewIndex && firstNewIndex > 0 ? firstNewCardRef : undefined}
+              />
+            </ProjectCardMotion>
           ))}
 
           {/* Skeletons: aparecen en el grid mientras carga, mismo número que cargará */}

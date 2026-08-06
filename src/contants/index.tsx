@@ -81,7 +81,7 @@ export const PROJECTS_SECTION_CONTENT = {
   filters: [
     { id: "all",        label: "Todos" },
     { id: "czlabs",    label: "CZ Labs" },
-    { id: "personal",  label: "Personales / Freelance" },
+    { id: "personal",  label: "Personales" },
   ],
   projects: [
     {
