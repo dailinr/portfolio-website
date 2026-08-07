@@ -47,11 +47,10 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background">
-      <nav className="px-8 py-6 flex items-center justify-between max-w-7xl mx-auto">
+      <nav className="px-6 sm:px-8 py-4 md:py-6 flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo/Title */}
 
         <a href="#" className="flex items-center gap-2 group transition-transform">
-
 
           {/* SVG manipulado directamente con un gradiente real de 2 tonos */}
           <svg
@@ -106,20 +105,20 @@ export default function Navbar() {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden relative z-50 flex flex-col justify-center items-center gap-[6px] w-10 h-10 text-foreground hover:text-primary transition-colors"
+          className="md:hidden relative z-50 flex flex-col justify-center items-center gap-[5px] w-9 h-9 text-foreground hover:text-primary transition-colors"
           aria-label="Toggle menu"
         >
           <motion.span
-            animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-current rounded-full block"
+            animate={isOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+            className="w-5 h-0.5 bg-current rounded-full block"
           />
           <motion.span
             animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-current rounded-full block"
+            className="w-5 h-0.5 bg-current rounded-full block"
           />
           <motion.span
-            animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-current rounded-full block"
+            animate={isOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+            className="w-5 h-0.5 bg-current rounded-full block"
           />
         </motion.button>
       </nav>
@@ -132,7 +131,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/5 shadow-2xl flex flex-col items-center py-10 gap-8 md:hidden z-40"
+            className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/5 shadow-2xl flex flex-col items-center py-8 gap-6 md:hidden z-40"
           >
             {navLinks.map((link, i) => (
               <motion.a

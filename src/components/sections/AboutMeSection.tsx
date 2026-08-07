@@ -71,6 +71,7 @@ export default function AboutSection() {
                 src={image.src} 
                 alt={image.alt} 
                 fill 
+                priority
                 sizes="(max-width: 640px) 210px, (max-width: 1024px) 250px, 500px"
                 className="object-cover"
               /> 

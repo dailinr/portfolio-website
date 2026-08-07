@@ -67,6 +67,7 @@ function CardImageArea({ project }: { project: Project }) {
           src={project.image}
           alt={project.title}
           fill
+          priority
           sizes="(max-width: 640px) 100vw, 50vw"
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
         />

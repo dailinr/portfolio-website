@@ -14,10 +14,10 @@ export const STANDARD_SECTION_PY =
 // TÍTULOS Y CABECERAS DE SECCIÓN GLOBALES
 // =================================================================
 export const SECTION_LABEL =
-  "text-center lg:text-left text-secondary uppercase tracking-[0.20em] text-xs font-bold mb-1.5" as const; 
+  "text-center lg:text-left text-secondary uppercase tracking-[0.20em] text-[10px] md:text-xs font-bold mb-1 md:mb-1.5" as const; 
 
 export const SECTION_HEADLINE =
-  "text-center lg:text-left text-3xl font-bold tracking-tight text-foreground" as const;
+  "text-center lg:text-left text-2xl md:text-3xl font-bold tracking-tight text-foreground" as const;
 
 // =================================================================
 // TOKENS ESPECÍFICOS DE LA LÍNEA DE TIEMPO (Experience)
