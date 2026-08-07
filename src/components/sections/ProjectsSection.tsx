@@ -173,8 +173,8 @@ export default function ProjectsSection() {
       <div className={GLOBAL_CONTAINER}>
 
         {/* ── Encabezado animado con Entrance ── */}
-        <Entrance direction="up" className="mb-8 flex flex-col items-start md:flex-row md:items-end md:justify-between">
-          <div>
+        <Entrance direction="up" className="mb-8 flex flex-col items-center text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
             <span className={SECTION_LABEL}>{label}</span>
             <h2 className={SECTION_HEADLINE}>
               {headline.main}
@@ -184,7 +184,7 @@ export default function ProjectsSection() {
         </Entrance>
 
         {/* ── Pills de Filtro animados ── */}
-        <Entrance direction="up" delay={0.1} className="mb-10 flex flex-wrap gap-2">
+        <Entrance direction="up" delay={0.1} className="mb-10 flex flex-wrap justify-center lg:justify-start gap-2">
           {filters.map((f) => (
             <button
               key={f.id}

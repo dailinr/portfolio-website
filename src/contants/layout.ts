@@ -8,16 +8,16 @@ export const GLOBAL_CONTAINER =
  * 2. RITMO VERTICAL DE SECCIONES (Vertical Rhythm)
  */
 export const STANDARD_SECTION_PY =
-  "py-14 scroll-mt-20" as const; 
+  "py-14 scroll-mt-26" as const; 
 
 // =================================================================
 // TÍTULOS Y CABECERAS DE SECCIÓN GLOBALES
 // =================================================================
 export const SECTION_LABEL =
-  "text-secondary uppercase tracking-[0.20em] text-xs font-bold mb-1.5" as const; 
+  "text-center lg:text-left text-secondary uppercase tracking-[0.20em] text-xs font-bold mb-1.5" as const; 
 
 export const SECTION_HEADLINE =
-  "text-3xl font-bold tracking-tight text-foreground" as const;
+  "text-center lg:text-left text-3xl font-bold tracking-tight text-foreground" as const;
 
 // =================================================================
 // TOKENS ESPECÍFICOS DE LA LÍNEA DE TIEMPO (Experience)
@@ -35,7 +35,7 @@ export const EXPERIENCE_COMPANY_HEADLINE =
   "text-lg font-semibold text-foreground mb-2" as const; 
 
 export const EXPERIENCE_BODY =
-  "text-base text-tertiary text-left md:text-justify leading-relaxed max-w-2xl text-pretty mb-2 " as const; 
+  "text-sm sm:text-base text-tertiary text-justify leading-relaxed max-w-2xl text-pretty" as const;
 
 export const EXPERIENCE_BADGE =
   "px-3 py-0.5 text-[11px] font-semibold border border-white/10 rounded-full text-foreground bg-white/5" as const;
@@ -66,7 +66,7 @@ export const PROJECT_CARD_TITLE =
 
 /** Descripción de la card de proyecto */
 export const PROJECT_CARD_BODY =
-  "text-sm text-tertiary text-left md:text-justify leading-relaxed text-pretty" as const;
+  "text-sm text-tertiary text-left text-justify leading-relaxed text-pretty" as const;
 
 /** Badge de rol dentro de la card (Lead Engineer, Full-Stack...) */
 export const PROJECT_ROLE_BADGE =
@@ -88,7 +88,7 @@ export const PROJECT_MOBILE_PHONE_FRAME =
 // ----------------- ABOUT ME ----------------------
 
 export const ABOUT_STATS_TITLE = 
-  "text-lg font-bold" as const;
+  "text-sm sm:text-lg font-bold" as const;
 
 export const ABOUT_STATS_SUBTITLE = 
   "text-[11px] font-semibold tracking-wider text-secondary uppercase" as const;

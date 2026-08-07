@@ -24,7 +24,7 @@ export default function ExperienceSection() {
       <div className={GLOBAL_CONTAINER}>
 
         {/* Cabecera animada con Entrance */}
-        <Entrance direction="up" className="mb-10 flex flex-col items-start">
+        <Entrance direction="up" className="mb-10 flex flex-col items-center text-center lg:items-start lg:text-left">
           <span className={SECTION_LABEL}>{label}</span>
           <h2 className={SECTION_HEADLINE}>
             {headline.main}
@@ -69,32 +69,32 @@ export default function ExperienceSection() {
                     </span>
 
 
-                    {/* Logo: cuadrado, fondo oscuro, borde glassmorphism */}
+                    {/* Logo: tamaño reducido en mobile (h-20 w-20), tamaño original en escritorio (md:h-28 md:w-28) */}
                     {exp.link ? (
                       <Link
                         href={exp.link}
                         target="_blank"
                         rel="noopener noreferrer" // Buena práctica de seguridad para target="_blank"
-                        className="relative h-28 w-28 overflow-hidden rounded-xl border border-white/10 bg-black/60 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.5)] backdrop-blur-md transition-transform duration-300 hover:scale-[1.04]"
+                        className="relative h-20 w-20 md:h-28 md:w-28 overflow-hidden rounded-xl border border-white/10 bg-black/60 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.5)] backdrop-blur-md transition-transform duration-300 hover:scale-[1.04]"
                       >
                         <Image
                           src={`/logos-empresas/${exp.id}.png`}
                           alt={`Logo de ${exp.company}`}
                           fill
-                          sizes="112px"
-                          className={`object-contain ${exp.id === "czlabs" ? 'p-5' : 'p-7'}`}
+                          sizes="(max-width: 768px) 80px, 112px"
+                          className={`object-contain ${exp.id === "czlabs" ? 'p-3 md:p-5' : 'p-5 md:p-7'}`}
                         />
                       </Link>
                     ) : (
                       <div
-                        className="relative h-28 w-28 overflow-hidden rounded-xl border border-white/10 bg-black/60 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
+                        className="relative h-20 w-20 md:h-28 md:w-28 overflow-hidden rounded-xl border border-white/10 bg-black/60 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
                       >
                         <Image
                           src={`/logos-empresas/${exp.id}.png`}
                           alt={`Logo de ${exp.company}`}
                           fill
-                          sizes="112px"
-                          className={`object-contain ${exp.id === "czlabs" ? 'p-5' : 'p-7'}`}
+                          sizes="(max-width: 768px) 80px, 112px"
+                          className={`object-contain ${exp.id === "czlabs" ? 'p-3 md:p-5' : 'p-5 md:p-7'}`}
                         />
                       </div>
                     )}

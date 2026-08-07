@@ -54,12 +54,12 @@ export default function HeroIntroMotion({
   // Si el usuario prefiere reducir movimiento, se renderiza estáticamente por accesibilidad
   if (reduce) {
     return (
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full items-center text-center lg:items-start lg:text-left">
         <div>{logo}</div>
         <div>{headlines}</div>
         {rule && <div>{rule}</div>}
         <div>{description}</div>
-        <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
           {primaryCta}
           {secondaryCta}
         </div>
@@ -69,7 +69,7 @@ export default function HeroIntroMotion({
 
   return (
     <motion.div
-      className="flex flex-col w-full"
+      className="flex flex-col w-full items-center text-center lg:items-start lg:text-left"
       variants={heroStagger}
       initial="hidden"
       animate="visible"
@@ -81,7 +81,7 @@ export default function HeroIntroMotion({
 
       <motion.div
         variants={heroStagger}
-        className="flex flex-col gap-4 pt-4 sm:flex-row"
+        className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4 w-full"
       >
         <motion.div variants={btnFade} className="inline-flex">
           {primaryCta}
