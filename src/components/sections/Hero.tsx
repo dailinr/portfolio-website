@@ -34,7 +34,7 @@ export default function Hero() {
             }
             rule={null}
             description={
-              <p className="mb-6 max-w-md lg:max-w-lg text-sm sm:text-base text-center lg:text-justify leading-relaxed text-tertiary">
+              <p className="mb-3 lg:mb-6 max-w-md lg:max-w-lg text-sm sm:text-base text-center lg:text-justify leading-relaxed text-tertiary">
                 {description}
               </p>
             }

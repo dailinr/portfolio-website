@@ -3,6 +3,7 @@
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 import { ENTRANCE_EASE } from "@/src/components/motion/Entrance";
+import { SOCIAL_LINKS } from "@/src/contants";
 
 // Configuración del escalonamiento (stagger) para los elementos hijos
 const heroStagger: Variants = {
@@ -63,6 +64,22 @@ export default function HeroIntroMotion({
           {primaryCta}
           {secondaryCta}
         </div>
+
+        {/* Redes sociales visibles solo en mobile/tablet para accesibilidad */}
+        <div className="flex lg:hidden items-center justify-center gap-6 pt-6 w-full">
+          {SOCIAL_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-tertiary hover:text-primary transition-colors duration-300"
+              aria-label={link.label}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
       </div>
     );
   }
@@ -89,6 +106,26 @@ export default function HeroIntroMotion({
         <motion.div variants={btnFade} className="inline-flex">
           {secondaryCta}
         </motion.div>
+      </motion.div>
+
+      {/* Redes sociales visibles solo en mobile/tablet (con animaciones) */}
+      <motion.div
+        variants={heroStagger}
+        className="flex lg:hidden items-center justify-center gap-6 pt-6 w-full"
+      >
+        {SOCIAL_LINKS.map((link) => (
+          <motion.a
+            key={link.label}
+            variants={btnFade}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-tertiary hover:text-primary transition-colors duration-300"
+            aria-label={link.label}
+          >
+            {link.icon}
+          </motion.a>
+        ))}
       </motion.div>
     </motion.div>
   );

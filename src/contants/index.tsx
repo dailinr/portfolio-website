@@ -1,3 +1,5 @@
+import React from "react";
+
 export const HERO_SECTION_CONTENT = {
   label: "Dailin Romero",
   headline: {
@@ -33,7 +35,7 @@ export const EXPERIENCE_SECTION_CONTENT = {
       id: "freelance",
       role: "Full Stack Developer",
       company: "Freelance",
-      period: "Nov 2024 — May 2025",
+      period: "Feb 2025 — May 2025",
       description:
         "Desarrollo integral de aplicaciones web a medida. Gestión del ciclo completo del proyecto, abarcando la construcción de interfaces dinámicas, lógica de servidor, bases de datos y diseño de APIs RESTful.",
       technologies: [
@@ -130,7 +132,7 @@ export const PROJECTS_SECTION_CONTENT = {
         "App móvil Web3 para torneos de Flag Football que conecta árbitros y organizadores mediante perfiles RefID. Integra autenticación híbrida (OAuth/Wallets), pagos instantáneos en USDC sobre la red de Solana.",
         // "App móvil Web3 para torneos de Flag Football que conecta árbitros y organizadores mediante perfiles RefID para construir un historial profesional. Integra autenticación híbrida (OAuth/Wallets) y pagos instantáneos en USDC sobre la red de Solana.",
         
-      link: "https://expo.dev/accounts/dailinr27/projects/refdao-app/builds/e6933414-7bd5-4e4a-8043-0956b8bc6e30",
+      link: "https://expo.dev/artifacts/eas/Ylzxs0QhkVnAigJoZBkrk2I_KdwALy1RrJiYo2t8Ym4.apk",
       image: "/projects/refdao-portada.png",
       technologies: ["React Native", "Expo", "Tailwind CSS", "Zustand", "TypeScript", "RHF", "Zod", ],
     },
@@ -152,7 +154,7 @@ export const PROJECTS_SECTION_CONTENT = {
       role: "Full Stack",
       title: 'Blog tecnopulse',
       description: "Blog interactivo centrado en tecnología y temas afines. Cuenta con un sistema completo para gestionar artículos propios, junto con funciones para seguir perfiles de interés, construir una colección de lecturas favoritas y recibir notificaciones de actividad.",
-      link: 'https://tecnopulse.lat/',
+      link: 'https://tecnopulse.site/',
       image: '/projects/945shots_so.png',
       technologies :["React", 'Tailwind CSS', 'Express', 'Mongo DB', "Node.js"],
     },
@@ -177,7 +179,7 @@ export const ABOUT_SECTION_CONTENT = {
     main: "Sobre mí",
   },
   paragraphs: [
-    "¡Hola! Soy Dailin. Llevo cuatro años inmersa en el ecosistema del desarrollo. Mi especialidad es el Frontend, creando interfaces dinámicas e intuitivas; a la par, domino el desarrollo Backend y las bases de datos a un nivel que me permite asumir con seguridad el ciclo completo de una solución Full Stack.",
+    "¡Hola! Soy Dailin. Llevo tres años inmersa en el ecosistema del desarrollo. Mi especialidad es el Frontend, creando interfaces dinámicas e intuitivas; a la par, domino el desarrollo Backend y las bases de datos a un nivel que me permite asumir con seguridad el ciclo completo de una solución Full Stack.",
     "En cuanto a mi formación técnica, cursé hasta el noveno semestre de Ingeniería de Sistemas en la Universidad del Magdalena, una base que he potenciado a través de mi experiencia profesional y la creación constante de proyectos independientes. Disfruto transformar requerimientos complejos en código limpio, escalable y listo para producción.",
   ],
   stats: [
@@ -188,7 +190,7 @@ export const ABOUT_SECTION_CONTENT = {
     },
     {
       id: "experience",
-      title: "4 Años",
+      title: "2 Años",
       subtitle: "De experiencia",
     },
     {
@@ -208,3 +210,42 @@ export const FOOTER_CONTENT = {
   copy_right: "Todos los derechos reservados.",
   full_name: "Dailin Romero"
 }
+
+export interface SocialLink {
+  icon: React.ReactNode;
+  href: string;
+  label: string;
+}
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    icon: (
+     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+      </svg>
+    ),
+    href: 'https://github.com/dailinr',
+    label: 'GitHub',
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+      </svg>
+    ),
+    href: 'https://www.linkedin.com/in/dailin-romero-7692281b9/',
+    label: 'LinkedIn',
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+    ),
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=dailinromero123@gmail.com&su=Contacto%20desde%20Portafolio.',
+    label: 'Gmail',
+  },
+];
