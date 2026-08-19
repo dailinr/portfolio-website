@@ -168,6 +168,17 @@ export const PROJECTS_SECTION_CONTENT = {
       link: 'https://declaracion-renta.vercel.app/',
       image: '/projects/43shots_so.png',
       technologies: ["React", 'Tailwind CSS', 'Zustand', 'RHF', 'Zod' ],
+    },
+    {
+      id: "psiconote",
+      category: "personal",
+      type: "web" as const,
+      role: "Frontend",
+      title: "Psiconote",
+      description: 'Plataforma web para el registro de citas psicologicas.',
+      link: "https://github.com/dailinr/psiconotes",
+      image: "/projects/psiconote.png",
+      technologies: ['React', 'Javascript', 'Bootstrap', 'CSS'],
     }
   ],
 };
